@@ -1,0 +1,732 @@
+@import url('https://fonts.cdnfonts.com/css/zekton');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+  font-family: 'Inria Sans';
+  background: #262C43;
+  color: #4b4b4b;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+
+/* INDEX */
+
+.index{
+  color: white;
+  margin: 50px auto 50px auto;
+  position: relative;
+  min-height: 77vh;
+
+  .top-games{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+
+    .tg{
+      text-align: center;
+      position: relative;
+      width: 460px;
+      height: 200px;
+      margin: 0 -20px;
+      transition: transform 0.3s;
+      z-index: 1;
+      overflow: hidden;
+      color: rgb(255, 255, 255, 0);
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      &:hover::before{
+        background: rgb(0, 0, 0, 0);
+        transition: 0.5s;
+      }
+
+
+      &:nth-child(1){
+        transform: translateX(200px) translateY(30px);
+        z-index: 0;
+      }
+      &:nth-child(1):hover{
+        z-index: 2;
+        width: 490px;
+        height: 210px;
+        font-size:20px;
+        transition: 0.5s;
+
+        .tg-name, .tg-offer{
+          display: block;
+        }
+      }
+
+      &:nth-child(2){
+        transform: translateX(100px) translateY(15px);
+        z-index: 0;
+      }
+      &:nth-child(2):hover{
+        z-index: 3;
+        width: 490px;
+        height: 210px;
+        transition: 0.5s;
+        font-size:20px;
+
+        .tg-name, .tg-offer{
+          display: block;
+        }
+      }
+
+      &:nth-child(3){
+        z-index: 2;
+      }
+      &:nth-child(3):hover{
+        width: 490px;
+        height: 210px;
+        transition: 0.5s;
+        font-size:20px;
+
+        .tg-name, .tg-offer{
+          display: block;
+        }
+      }
+
+      &:nth-child(4){
+        transform: translateX(-100px) translateY(15px);
+        z-index: 1;
+      }
+      &:nth-child(4):hover{
+        z-index: 2;
+        width: 490px;
+        height: 210px;
+        transition: 0.5s;
+        font-size:20px;
+
+        .tg-name, .tg-offer{
+          display: block;
+        }
+      }
+
+      &:nth-child(5){
+        transform: translateX(-200px) translateY(30px);
+        z-index:0;
+      }
+      &:nth-child(5):hover{
+        z-index: 2;
+        width: 490px;
+        height: 210px;
+        transition: 0.5s;
+        font-size:20px;
+        .tg-name, .tg-offer{
+          display: block;
+        }
+      }
+
+      .tg-img{
+        width: 100%;
+        height: 100%;
+        object-fit:  cover;
+      }
+
+      .tg-name{
+        position: absolute;
+        top:86%;
+        left: auto;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0, 0.5);
+        display: none;
+      }
+
+      .tg-offer{
+        position: absolute;
+        top:0px;
+        right: 0px;
+        background: rgb(104, 173, 0);
+        padding: 2px;
+        color: rgb(255, 255, 255);
+        display: none;
+      }
+    }
+  }
+
+
+  .second-content{
+    margin: 0px 0px 0px 0px;
+    position: relative;
+
+    .sub-division1{
+      background: #1B2031;
+      position: relative;
+      margin-bottom: 30px;
+
+      h2{
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+
+    .sub-division2{
+      text-align: center;
+      img{
+        margin: auto;
+        width: 75px;
+        filter: drop-shadow(
+          0 0 20px rgba(0, 0, 0, 0.8)
+        )
+      }
+      h2{
+        font-size: 20px;
+        font-weight: bold;
+        filter: drop-shadow(
+          0 0 5px rgba(0, 0, 0, 0.7)
+        )
+      }
+    }
+    
+    .game-content{
+      width: 80%;
+      margin: 20px auto 80px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border-bottom: 2px solid #1B2031;
+
+      .g-index{
+        width: 215px;
+        margin: 40px 10px 10px 20px;
+        position: relative;
+        border: solid 2px rgb(119, 119, 119);
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background: rgb(0, 0, 0, 0);
+        }
+
+        &:hover::before{
+          background: rgb(0, 0, 0, 0.6);
+          transition: 0.2s;
+          content: "Ver en Página..!";
+          color: white;
+          font-weight: bold;
+          margin: auto;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .game-index-offer{
+          position: absolute;
+          top:0px;
+          right: 0px;
+          background: rgb(104, 173, 0);
+          padding: 2px;
+          color: rgb(255, 255, 255);
+          font-size: 14px;
+        }
+
+        .game-index-img-steam{
+          width: 100%;
+
+        }
+
+        .game-index-img-epic{
+          width: 100%;
+          height: 281px;
+        }
+
+
+        .game-index-info{
+          width: 100%;
+          background: rgb(0, 0, 0, 0.5);
+          display: flex;
+          border-top: solid 2px rgb(119, 119, 119);
+
+          .game-index-name{
+            font-size: 14px;
+            width: 65%;
+            margin: 3px 0px 6px 6px;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            height: 42px;
+            overflow: hidden;
+          }
+
+          .game-index-price{
+            display: flex;
+            width: 35%;
+            flex-wrap: wrap;
+            justify-content: end;
+            margin: 3px 6px 6px 0px;
+
+            .gi-normal{
+              font-size: 13px;
+              text-decoration: line-through;
+              color: rgb(109, 109, 109);
+            }
+            .gi-offer{
+              font-size: 17px;
+            }
+          }
+        }
+
+      }
+
+      .g-index:hover{
+        box-shadow: 0px 0px 25px #768cd4;
+        width: 210px;
+        transition: 0.1s;
+
+        .game-index-img-epic{
+          width: 100%;
+          height: 278px;
+        }
+      }
+
+      .g-hook{
+        width: 100%;
+        text-align: center;
+        margin: 30px 0px 50px 0px;
+        a{
+          
+          padding: 10px 50px;
+          
+        }
+
+        a:hover{
+          border: 1px white solid;
+          background:#1B2031;
+          transition: 0.2s;
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+}
+
+/*  OFFERS  */
+
+.offers{
+  width: 90%;
+  margin: 40px auto;
+  min-height: 77vh;
+
+  .tittle{
+    
+    h2{
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      filter: drop-shadow(
+          0 0 5px rgba(255, 255, 255, 0.7)
+        )
+    }
+  }
+
+  .main-box{
+    margin: 50px 0px 20px 0px;
+    display: flex;
+    .off-filter{
+      width: 20%;
+      background: #1B2031;
+      padding: 10px 25px;
+      height: 500px;
+      box-shadow: 2px 2px 10px black;
+      margin-right: 50px;
+
+      h3{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }
+
+      .off-all-filters{
+        .fl-search{
+          margin: 10px 0px 20px 0px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          span{
+            color: white;
+            width: 100%;
+            margin-bottom: 5px;
+          }
+          input{
+            width: 100%;
+          }
+
+          div{
+            width: 100%;
+          }
+        }
+
+        .fl-order{
+          display: flex;
+          flex-wrap: wrap;
+          span{
+            color: white;
+            width: 100%;
+            margin-bottom: 5px;
+          }
+          select{
+            width: 100%;
+          }
+        }
+
+        .fl-platform{
+          color: white;
+          margin: 20px 0px 10px 0px;
+          input{
+            margin: 10px 10px 10px 10px;
+          }
+        }
+
+        .fl-price{
+          span{
+            width: 100%;
+            color: white;
+          }
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+    .off-content{
+      width: 80%;
+
+      .off-content-box{
+        width: 100%;
+        margin: 0px auto 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-bottom: 2px solid #1B2031;
+        position: relative;
+
+        .g-index{
+          width: 215px;
+          margin: 20px 20px 20px 20px;
+          position: relative;
+          border: solid 1px rgb(119, 119, 119);
+          position: relative;
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgb(0, 0, 0, 0);
+          }
+
+          &:hover::before{
+            background: rgb(0, 0, 0, 0.6);
+            transition: 0.2s;
+            content: "Ver en Página..!";
+            color: white;
+            font-weight: bold;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+  
+          .game-index-offer{
+            position: absolute;
+            top:0px;
+            right: 0px;
+            background: rgb(104, 173, 0);
+            padding: 2px;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+          }
+
+          .game-index-steam-logo{
+            position: absolute;
+            top:0px;
+            left: 0px;
+            padding: 2px;
+            width: 30px;
+          }
+
+          .game-index-epic-logo{
+            position: absolute;
+            top:0px;
+            left: 0px;
+            padding: 2px;
+            width: 30px;
+          }
+  
+          .game-index-img-steam{
+            width: 100%;
+          }
+
+          .game-index-img-epic{
+            height: 284px;
+          }
+  
+  
+          .game-index-info{
+            width: 100%;
+            background: rgb(0, 0, 0, 0.5);
+            display: flex;
+            border-top: solid 1px rgb(119, 119, 119);
+            color: white;
+            height: 55px;
+  
+            .game-index-name{
+              font-size: 14px;
+              width: 65%;
+              margin: auto 0px auto 6px;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              height: 42px;
+              overflow: hidden;
+            }
+  
+            .game-index-price{
+              display: flex;
+              width: 35%;
+              flex-wrap: wrap;
+              justify-content: end;
+              margin: 3px 6px 6px 0px;
+              align-items: center;
+  
+              .gi-normal{
+                font-size: 13px;
+                text-decoration: line-through;
+                color: rgb(109, 109, 109);
+              }
+              .gi-offer{
+                font-size: 17px;
+              }
+            }
+          }
+        }
+
+        button{
+          width: 80%;
+          margin:30px 0px 30px 0px;
+          background: #1B2031;
+          padding: 10px 0px;
+          color: white;
+        }
+        button:hover{
+          padding: 12px 0px;
+          border: solid 1px white;
+          font-size: 17px;
+          transition: 0.2s;
+
+        }
+  
+        .g-index:hover{
+          box-shadow: 0px 0px 25px #768cd4;
+          width: 210px;
+          transition: 0.1s;
+          height: 100%;
+        }
+  
+        .g-hook{
+          width: 100%;
+          text-align: center;
+          margin: 30px 0px 50px 0px;
+          a{
+            
+            padding: 10px 50px;
+            
+          }
+  
+          a:hover{
+            border: 1px white solid;
+            background:#1B2031;
+            transition: 0.2s;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+
+      
+    }
+  }
+
+  
+}
+
+.sources{
+  width: 70%;
+  margin: 60px auto;
+  min-height: 77vh;
+
+  .s1{
+    display: flex;
+    justify-content:space-around;
+    margin: 0px 0px 60px 0px;
+    padding: 25px;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    .s1-logo{
+      width: 15%;
+      display: flex;
+      align-items: center;
+
+      img{
+        width: 90%;
+        transition: all 0.5s ease;
+        filter: drop-shadow(
+          0 0 20px rgba(0, 0, 0, 0.8)
+        )
+        
+      }
+    }
+
+    .s1-info{
+      width: 65%;
+
+      h2{
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        transition: all 0.5s ease;
+      }
+      p{
+        font-size: 15px;
+        color: white;
+        padding-right: 10px;
+        transition: all 0.5s ease;
+      }
+      a{
+        transition: all 0.5s ease;
+      }
+      a:hover{
+        background: #1B2031;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+
+  .s1:hover{
+    box-shadow: 10px 10px 10px #1B2031;
+
+    h2{
+      font-size: 40px;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    p{
+      font-size: 16px;
+    }
+    a{
+      background: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .s2{
+    display: flex;
+    justify-content:space-around;
+    margin: 0px 0px 60px 0px;
+    align-items: center;
+    padding: 25px;
+    transition: all 0.5s ease;
+    
+
+    .s2-logo{
+      width: 15%;
+      display: flex;
+      align-items: center;
+
+      img{
+        width: 90%;
+        transition: all 0.5s ease;
+        filter: drop-shadow(
+          0 0 20px rgba(0, 0, 0, 0.8)
+        )
+      }
+    }
+    .s2-info{
+      width: 65%;
+
+      h2{
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        transition: all 0.5s ease;
+      }
+      p{
+        font-size: 15px;
+        color: white;
+        padding-right: 10px;
+        transition: all 0.5s ease;
+      }
+      a{
+        transition: all 0.5s ease;
+      }
+      a:hover{
+        background: #1B2031;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+  .s2:hover{
+    box-shadow: -10px 10px 10px #1B2031;
+
+    h2{
+      font-size: 40px;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    p{
+      font-size: 16px;
+    }
+
+    a{
+      background: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
+}
